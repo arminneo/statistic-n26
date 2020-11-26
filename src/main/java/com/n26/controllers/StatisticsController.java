@@ -1,7 +1,7 @@
 package com.n26.controllers;
 
 import com.n26.io.Statistics;
-import com.n26.services.StatisticsService;
+import com.n26.services.StatisticsServiceImpl;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/statistics")
 public class StatisticsController extends BaseController {
-    private final StatisticsService statisticsService;
+    private final StatisticsServiceImpl statisticsService;
 
-    public StatisticsController(StatisticsService statisticsService) {
+    public StatisticsController(StatisticsServiceImpl statisticsService) {
         this.statisticsService = statisticsService;
     }
 

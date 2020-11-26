@@ -21,11 +21,11 @@ import java.util.List;
  */
 
 @Service
-public class StatisticsService {
+public class StatisticsServiceImpl {
 
     final TransactionStore store;
 
-    public StatisticsService(TransactionStore transactionStore) {
+    public StatisticsServiceImpl(TransactionStore transactionStore) {
         this.store = transactionStore;
     }
 
