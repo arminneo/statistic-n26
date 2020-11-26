@@ -27,7 +27,7 @@ public class StatisticsServiceTest {
     private TransactionStore store;
 
     @Autowired
-    private StatisticsService service;
+    private StatisticsServiceImpl service;
 
     @Before
     public void init() {
