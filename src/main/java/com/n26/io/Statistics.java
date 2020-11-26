@@ -1,10 +1,15 @@
 package com.n26.io;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
 import java.math.BigDecimal;
 import java.util.DoubleSummaryStatistics;
 
 import static com.n26.utils.MoneyFormatter.formatMoney;
 
+@Data
 public class Statistics {
 
     private String sum;
@@ -24,45 +29,6 @@ public class Statistics {
         this.count = count;
     }
 
-    public String getSum() {
-        return sum;
-    }
-
-    public void setSum(String sum) {
-        this.sum = sum;
-    }
-
-    public String getAvg() {
-        return avg;
-    }
-
-    public void setAvg(String avg) {
-        this.avg = avg;
-    }
-
-    public String getMax() {
-        return max;
-    }
-
-    public void setMax(String max) {
-        this.max = max;
-    }
-
-    public String getMin() {
-        return min;
-    }
-
-    public void setMin(String min) {
-        this.min = min;
-    }
-
-    public long getCount() {
-        return count;
-    }
-
-    public void setCount(long count) {
-        this.count = count;
-    }
 
     public static Statistics of(BigDecimal sum, BigDecimal avg, BigDecimal max, BigDecimal min, long count) {
         return new Statistics(formatMoney(sum), formatMoney(avg), formatMoney(max), formatMoney(min), count);
